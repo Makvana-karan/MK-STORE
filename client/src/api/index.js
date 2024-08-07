@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const API = axios.create({
-  baseURL: "http://localhost:8000/api/",
+  baseURL: "backend-chi-lake-57.vercel.app/api/",
 });
 
 export const UserSignUp = async (data) => await API.post("/user/signup", data);
