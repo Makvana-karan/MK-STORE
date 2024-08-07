@@ -24,7 +24,7 @@ app.use((err, req, res, next) => {
 
 app.get("/", async (req, res) => {
   res.status(200).json({
-    message: "Hello GFG Developers",
+    message: "Hello",
   });
 });
 
@@ -41,13 +41,5 @@ const connectDB = () => {
     });
 };
 
-const startServer = async () => {
-  try {
-    connectDB();
-    app.listen(8000, () => console.log("Server started on port 8000"));
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-startServer();
+connectDB();
+app.listen(8000, () => console.log("Server started on port 8000"));

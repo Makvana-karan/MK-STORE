@@ -7,10 +7,12 @@ import { useState } from "react";
 import Authentication from "./pages/Authentication";
 import ShopListing from "./pages/ShopListing";
 import Favourite from "./pages/Favourite";
+import NewArrival from "./pages/NewArrival";
 import Cart from "./pages/Cart";
 import ProductDetails from "./pages/ProductDetails";
 import { useDispatch, useSelector } from "react-redux";
 import ToastMessage from "./components/ToastMessage";
+import Contact from "./pages/Contact";
 
 const Container = styled.div`
   width: 100%;
@@ -38,6 +40,8 @@ function App() {
             <Route path="/shop" exact element={<ShopListing />} />
             <Route path="/favorite" exact element={<Favourite />} />
             <Route path="/cart" exact element={<Cart />} />
+            <Route path="/newArrival" exact element={<NewArrival />} />
+            <Route path="/contact" exact element={<Contact />} />
             <Route path="/shop/:id" exact element={<ProductDetails />} />
           </Routes>
           {openAuth && (
